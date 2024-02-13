@@ -7,7 +7,7 @@ resource "aws_instance" "my-instance" {
   instance_type = "t2.micro"             
   key_name      = "new-key"
   subnet_id     = "subnet-0da54f43144cbf0c0"
-  security_groups = ["sg-059f0f4fe0c3d6688"]
+  security_groups = ["sg-038f5dbc2b42e1eaa"]
 
   tags = {
   
