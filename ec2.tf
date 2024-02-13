@@ -28,6 +28,10 @@ resource "aws_security_group" "instance_sg" {
     protocol    = "-1"  
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+  tag = {
+    name = "new-sg"
+  }
 }
 
 resource "aws_instance" "my-instance" {
