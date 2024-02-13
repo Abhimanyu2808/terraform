@@ -9,8 +9,8 @@ resource "aws_instance" "my-instance" {
   key_name      = "new-key"
   security_group_id = ["sg-038f5dbc2b42e1eaa"] 
 
-  tags = 
-  {
+  tags = {
+  
     Name = "instance-1"
   }
 }
