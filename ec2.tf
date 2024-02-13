@@ -6,7 +6,11 @@ provider "aws" {
 resource "aws_security_group" "instance_sg" {
   name        = "my-instance-sg"
   description = "Security group for the example EC2 instance"
-  
+
+  tags = {
+    name = "new-sg"
+  }
+
   ingress {
     from_port   = 22
     to_port     = 22
@@ -29,9 +33,6 @@ resource "aws_security_group" "instance_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = {
-    name = "new-sg"
-  }
 }
 
 resource "aws_instance" "my-instance" {
